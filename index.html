@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>切西瓜小游戏</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <canvas id="gameCanvas"></canvas>
+        <div id="hud" class="hud">
+            <div class="score-display">
+                <span class="label">分数：</span>
+                <span id="score">0</span>
+            </div>
+            <div class="lives-display">
+                <span class="label">生命：</span>
+                <span id="lives">❤️❤️❤️</span>
+            </div>
+        </div>
+        <div id="startMenu" class="menu">
+            <h1>🍉 切西瓜 🍉</h1>
+            <p class="instructions">用鼠标滑动切开西瓜，不要让西瓜掉落！</p>
+            <button id="startButton" class="game-button">开始游戏</button>
+            <div class="tips">
+                <p>💡 切中西瓜 +10 分</p>
+                <p>💡 西瓜掉落 -1 生命</p>
+                <p>💡 生命耗尽游戏结束</p>
+            </div>
+        </div>
+        <div id="gameOverMenu" class="menu hidden">
+            <h1>游戏结束</h1>
+            <p class="final-score">最终分数：<span id="finalScore">0</span></p>
+            <button id="restartButton" class="game-button">重新开始</button>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
